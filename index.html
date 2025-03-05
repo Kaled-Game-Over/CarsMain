@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><b>Car Dealership</b></h1>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Intro Section -->
+<section id="intro">
+    <h1>Welcome to Your Ultimate Car Dealership!</h1>
+    <p>Find your dream car at unbeatable prices. Explore our collection now!</p>
+    <a href="#cars" class="explore-btn">Browse Cars</a>
+</section>
+
+  
+
+    <section id="cars">
+        <h2>Available Cars</h2>
+        <input type="text" id="searchBox" placeholder="Search cars..." onkeyup="searchCars()">
+        <label for="priceFilter">Max Price:</label>
+        <select id="priceFilter" onchange="filterByPrice()">
+            <option value="100000">Any</option>
+            <option value="30000">$30,000</option>
+            <option value="50000">$50,000</option>
+            <option value="70000">$70,000</option>
+        </select>
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter" onchange="filterByCategory()">
+            <option value="all">All</option>
+            <option value="Sports">Sports</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Electric">Electric</option>
+        </select>
+        <div class="car-list" id="carList"></div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="contactSuccessMessage" style="display:none;">Thank you! We will contact you soon.</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
